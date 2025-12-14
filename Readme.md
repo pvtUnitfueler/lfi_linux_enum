@@ -1,4 +1,4 @@
-Scripts and usage is explained in the files
+LFI linux enum should help in enumerating local file inclusions. Usage is explained in the files
 
 ```bash ./lfi-enum.bash http://0.0.0.0:8000/?page=../../../../ >> lfi-enum-linux.txt```
 
